@@ -1,0 +1,31 @@
+
+body {
+	margin:  0;
+	padding: 0;
+}
+
+body > section.content {
+	padding: 0 0.5em;
+}
+
+h1 {
+	margin:  0.25em 0;
+	padding: 0;
+	_padding-left: 0.1em;
+	_border-left: 0.3em solid black;
+}
+
+.block {
+	margin:  0;
+	margin-bottom: 0.5em;
+	padding: 0.5em;
+	border: 1px solid black;
+}
+
+.red {
+	color: red;
+}
+
+.blue {
+	color: blue;
+}
