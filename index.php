@@ -48,7 +48,7 @@
 		</table>
 
 		<!-- phpinfo -->
-		<?php phpinfo(); ?>
+		<iframe src="phpinfo.php"></iframe>
 	</section>
 
 	<!-- footer -->
