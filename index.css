@@ -8,6 +8,13 @@ body > section.content {
 	padding: 0 0.5em;
 }
 
+iframe {
+	width:  calc(100% - 2px);
+	height: calc(100% - 2px);
+	border: 1px solid black;
+	margin-top: 0.5em;
+}
+
 h1 {
 	margin:  0.25em 0;
 	padding: 0;
