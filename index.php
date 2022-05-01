@@ -37,8 +37,8 @@ error_reporting(E_ALL);
 			switch php version:
 			<select id="switch_php_version">
 				<option></option>
-				<?php foreach([52,53,54,55,56,70,71,72,73,74,80,81] as $version): ?>
-				<option><?= $version ?></option>
+				<?php foreach(array(52,53,54,55,56,70,71,72,73,74,80,81) as $version): ?>
+				<option><?php echo $version ?></option>
 				<?php endforeach; ?>
 			</select>
 		</form>
@@ -46,7 +46,7 @@ error_reporting(E_ALL);
 		<!-- $_SERVER -->
 		<table>
 		<?php foreach($_SERVER as $key => $val): ?>
-			<tr><th><?= $key ?></th><td><?= is_array($val) ? var_dump($val): $val ?></td></tr>
+			<tr><th><?php echo $key ?></th><td><?php echo is_array($val) ? var_dump($val): $val ?></td></tr>
 		<?php endforeach; ?>
 		</table>
 
