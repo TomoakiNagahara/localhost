@@ -34,7 +34,7 @@
 			switch php version:
 			<select id="switch_php_version">
 				<option></option>
-				<?php foreach(['52','53','54','55','56','70','71','72','73','74','80'] as $version): ?>
+				<?php foreach([52,53,54,55,56,70,71,72,73,74,80,81] as $version): ?>
 				<option><?= $version ?></option>
 				<?php endforeach; ?>
 			</select>
