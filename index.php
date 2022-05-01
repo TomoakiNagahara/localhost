@@ -43,7 +43,7 @@
 		<!-- $_SERVER -->
 		<table>
 		<?php foreach($_SERVER as $key => $val): ?>
-			<tr><th><?= $key ?></th><td><?= $val ?></td></tr>
+			<tr><th><?= $key ?></th><td><?= is_array($val) ? var_dump($val): $val ?></td></tr>
 		<?php endforeach; ?>
 		</table>
 
