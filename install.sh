@@ -5,7 +5,8 @@ port selfupdate
 # each PHP version.
 for i in 53 54 55 56 70 71 72 73 74 80 81
 do
-  for s in fpm
+  # each PHP Library.
+  for s in fpm mysql
   do
     port install php${i}-${s}
   done
