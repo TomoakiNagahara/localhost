@@ -19,16 +19,22 @@ do
   # Init php-fpm.conf
   if [ ! -e /opt/local/etc/php${i}/php-fpm.conf ]; then
     cp /opt/local/etc/php${i}/php-fpm.conf.default /opt/local/etc/php${i}/php-fpm.conf
+    # Change listen port
+    if [ $i < 70 ]; then
+      sed -i -e "s/127.0.0.1:9000/127.0.0.1:90${i}/g" /opt/local/etc/php${i}/php-fpm.conf
+    fi
   fi
 
-  # Init php-fpm.d/www.conf
-  if [ ! -e /opt/local/etc/php${i}/php-fpm.d/www.conf ]; then
-    cp /opt/local/etc/php${i}/php-fpm.d/www.conf.default /opt/local/etc/php${i}/php-fpm.d/www.conf
-
-    # Change listen port.
-    sed -i -e "s/127.0.0.1:9000/127.0.0.1:90${i}/g" /opt/local/etc/php${i}/php-fpm.d/www.conf
-    # Remove -e file.
-    rm /opt/local/etc/php${i}/php-fpm.d/www.conf-e
+  # Change listen port
+  if [ $i >= 70 ]; then
+    # Init php-fpm.d/www.conf
+    if [ ! -e /opt/local/etc/php${i}/php-fpm.d/www.conf ]; then
+      cp /opt/local/etc/php${i}/php-fpm.d/www.conf.default /opt/local/etc/php${i}/php-fpm.d/www.conf
+      # Change listen port.
+      sed -i -e "s/127.0.0.1:9000/127.0.0.1:90${i}/g" /opt/local/etc/php${i}/php-fpm.d/www.conf
+      # Remove -e file.
+      rm /opt/local/etc/php${i}/php-fpm.d/www.conf-e
+    fi
   fi
 
   # Reboot
