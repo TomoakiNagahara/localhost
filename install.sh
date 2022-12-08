@@ -9,7 +9,7 @@ do
   port install php${i}
 
   # each PHP Library.
-  for s in fpm mysql
+  for s in fpm mysql memcached
   do
     port install php${i}-${s}
   done
