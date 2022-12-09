@@ -3,7 +3,7 @@
 port selfupdate
 
 # each PHP version.
-for i in 53 54 55 56 70 71 72 73 74 80 81
+for i in 53 54 55 56 70 71 72 73 74 80 81 82
 do
   # Install PHP
   port install php${i}
