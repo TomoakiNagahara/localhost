@@ -19,17 +19,17 @@ do
     cp /opt/local/etc/php${i}/php.ini-development /opt/local/etc/php${i}/php.ini
   fi
 
-  # Init php-fpm.conf
+  # php-fpm.conf is copy at all version.
   if [ ! -e /opt/local/etc/php${i}/php-fpm.conf ]; then
     cp /opt/local/etc/php${i}/php-fpm.conf.default /opt/local/etc/php${i}/php-fpm.conf
-    # Change listen port
-    if [ $i < 70 ]; then
+    # Change listen port before 7.0
+    if [ $i -lt 70 ]; then
       sed -i -e "s/127.0.0.1:9000/127.0.0.1:90${i}/g" /opt/local/etc/php${i}/php-fpm.conf
     fi
   fi
 
-  # Change listen port
-  if [ $i >= 70 ]; then
+  # Change listen port after 7.0
+  if [ $i -ge 70 ]; then
     # Init php-fpm.d/www.conf
     if [ ! -e /opt/local/etc/php${i}/php-fpm.d/www.conf ]; then
       cp /opt/local/etc/php${i}/php-fpm.d/www.conf.default /opt/local/etc/php${i}/php-fpm.d/www.conf
