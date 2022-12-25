@@ -1,0 +1,20 @@
+<?php
+/** localhost:/header.phtml
+ *
+ * @created   2022-12-25
+ * @version   1.0
+ * @package   localhost
+ * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @copyright Tomoaki Nagahara All right reserved.
+ */
+$current = basename($_SERVER['REQUEST_URI']);
+foreach( glob('*.php') as $file ){
+	$span = ($current === $file) ? "<span>{$file}</span>" : "<a href='{$file}'>{$file}</a>";
+	$join[] = $span;
+}
+?>
+<header class="block">
+	[
+	<?= join(' | ', $join); ?>
+	]
+</header>
