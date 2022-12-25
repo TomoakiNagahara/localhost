@@ -1,4 +1,13 @@
 <?php
+/** localhost:/index.php
+ *
+ * @created   2021-10-20
+ * @version   1.0
+ * @package   localhost
+ * @author    Tomoaki Nagahara <tomoaki.nagahara@gmail.com>
+ * @copyright Tomoaki Nagahara All right reserved.
+ */
+//	...
 error_reporting(E_ALL);
 ?>
 <!doctype>
