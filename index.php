@@ -12,16 +12,8 @@ error_reporting(E_ALL);
 ?>
 <!doctype>
 <html>
-<head>
-	<!-- icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-
-	<!-- Stylesheet -->
-	<link type="text/css" href="index.css?<?= date('H') ?>" rel="stylesheet">
-
-	<!-- JavaScript -->
-	<script type="text/javascript" src="index.js?<?= date('H') ?>" defer></script>
-</head>
+<!-- head -->
+<?php include('head.phtml') ?>
 <body>
 	<!-- header -->
 	<header></header>
