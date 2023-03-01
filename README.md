@@ -1,4 +1,5 @@
-# Environment to run different versions of PHP
+Environment to run different versions of PHP
+===
 
  * install.sh - Automaticall install each version PHP.
  * index.html - Standard page.
@@ -6,3 +7,4 @@
  * index.css  - Style sheet.
  * index.js   - Switching PHP version.
  * phpinfo.php - Execute phpinfo().
+ * localhost.conf - Nginx conf file.
