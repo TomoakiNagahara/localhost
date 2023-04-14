@@ -10,7 +10,7 @@ do
   port install php${i}
 
   # each PHP Library.
-  for s in fpm mbstring mysql openssl igbinary memcached
+  for s in fpm mbstring mysql openssl igbinary memcached tideways_xhprof
   do
     port install php${i}-${s}
   done
