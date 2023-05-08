@@ -24,9 +24,8 @@ error_reporting(E_ALL);
 		<?php include('switcher.phtml'); ?>
 
 		<!-- Datetime -->
-		<?php
-		echo date('Y-m-d H:i:s');
-		?>
+		<p>timezone: <?= date_default_timezone_get() ?></p>
+		<p>datetime: <?= date('Y-m-d H:i:s') ?></p>
 	</section>
 
 	<!-- footer -->
